@@ -1,0 +1,136 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jollibee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+              <li><a href="index.html">Back to Home</a></li>
+          </ul>
+          <img src="logo.png" alt="Jollibee Logo" title="Jollibee Logo">
+      </div>
+  </nav>
+    <section class="showcase-area" id="showcase">
+      <div class="showcase-container">
+        <h1 class="main-title" id="home">Jollibee</h1>
+        <p>Welcome to Jollibee!</p>
+        <a href="#food" class="btn btn-primary">Menu</a>
+      </div>
+    </section>
+
+
+    <section id="food-menu">
+      <h2 class="food-menu-heading">Best Sellers</h2>
+      <div class="food-menu-container container">
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="Zinger.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">6pc Chickenjoy bucket, 3pc Chicken Tenders w/ dip, and 2 Chicken Sandwiches</h2>
+            <p class="food-price">Price: ₱699</p>
+          </div>
+        </div>
+
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img
+              src="SpagChick.png"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">6 - pc. Chickenjoy Bucket w/ Jolly Spaghetti Family</h2>
+            <p class="food-price">Price: ₱399</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="Yumburger-Solo.png" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Yumburger</h2>
+            <p class="food-price">Price: ₱49</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="Jolly-Spaghetti-Solo.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Jolly Spaghetti</h2>
+            <p class="food-price">Price: ₱70</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="Coke-Zero-Regular.png" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Coke Zero Regular</h2>
+            <p class="food-price">Price: ₱699</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="CookFloat.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Coke Float</h2>
+            <p class="food-price">Price: ₱50</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- 
+    .................../ JS Code for smooth scrolling /...................... -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
+</html>
